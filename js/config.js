@@ -1,6 +1,6 @@
 {
     "api": "https://www.tienvuc.live",
-    "customdns": "off",
+    "customdns": "on",
     "customdnsurl": "https://1.1.1.1/dns-query",
     "key": "dnt",
     "value": "1"
