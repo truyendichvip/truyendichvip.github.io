@@ -1,5 +1,5 @@
 {
-    "api": "https://www.truyenmoi.live",
+    "api": "https://www.chodosi.live",
     "customdns": "off",
     "customdnsurl": "https://dns.google/dns-query",
     "key": "dnt",
