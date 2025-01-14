@@ -1,5 +1,5 @@
 {
-    "api": "https://www.chodosi.live",
+    "api": "https://www.truyentuongtac.live",
     "customdns": "on",
     "customdnsurl": "https://1.1.1.1/dns-query",
     "key": "dnt",
