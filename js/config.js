@@ -1,7 +1,7 @@
 {
     "api": "https://www.banhang.live",
-    "customdns": "off",
-    "customdnsurl": "https://1.1.1.1/dns-query",
+    "customdns": "on",
+    "customdnsurl": "https://dns.google/dns-query",
     "key": "dnt",
     "value": "2"
 }
