@@ -1,5 +1,5 @@
 {
-    "api": "",
+    "api": "https://www.ttsbox.online",
     "customdns": "on",
     "customdnsurl": "https://dns.google/dns-query",
     "key": "dnt",
