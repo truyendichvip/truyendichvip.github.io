@@ -1,5 +1,5 @@
 {
-    "api": "https://www.voicetube.online",
+    "api": "https://www.audiovoice.online",
     "customdns": "on",
     "customdnsurl": "https://dns.google/dns-query",
     "key": "dnt",
