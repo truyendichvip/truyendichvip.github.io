@@ -1,5 +1,5 @@
 {
-    "api": "https://www.audiovoice.online",
+    "api": "https://www.ebook2audio.online",
     "customdns": "on",
     "customdnsurl": "https://dns.google/dns-query",
     "key": "dnt",
