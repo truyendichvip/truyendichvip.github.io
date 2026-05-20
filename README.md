@@ -51,14 +51,14 @@
     <body>
         <div class="swiper" style="height: 100vh;">
             <div class="swiper-wrapper">
-                
+                 <!--
                 <a href="https://www.truyendichvip.live/ebook" class="swiper-slide">
                     <img class="swiper-gl-image" src="https://i.imgur.com/eIPliUY.jpg" alt="">
                     <div class="swiper-slide-content">
                         <div class="swiper-slide-title"></div>
                     </div>
                 </a>
-                
+                -->
                 <a href="novelbox://novel/3794" class="swiper-slide">
                     <img class="swiper-gl-image" src="https://i.imgur.com/t2aP33h.jpg" alt="">
                     <div class="swiper-slide-content">
