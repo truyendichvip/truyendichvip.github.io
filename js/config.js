@@ -1,5 +1,5 @@
 {
-    "api": "https://www.ebook2audio.online",
+    "api": "https://www.danhco.online",
     "customdns": "on",
     "customdnsurl": "https://dns.google/dns-query",
     "key": "dnt",
