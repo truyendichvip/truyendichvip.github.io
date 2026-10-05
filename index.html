@@ -227,12 +227,52 @@
             color: white;
         }
 
+        /* Support */
+        .support {
+            margin-top: 1.5rem;
+            animation: fadeIn 0.5s ease-out 0.2s both;
+        }
+
+        .support-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.55rem;
+            padding: 0.7rem 1.4rem;
+            color: white;
+            background: #1877f2;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(24, 119, 242, 0.32);
+            transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .support-btn:hover {
+            background: #0f68d9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 22px rgba(24, 119, 242, 0.42);
+        }
+
+        .support-btn:focus-visible {
+            outline: 3px solid rgba(255, 255, 255, 0.9);
+            outline-offset: 3px;
+        }
+
+        .support-btn svg {
+            width: 1.15rem;
+            height: 1.15rem;
+            flex: none;
+            fill: currentColor;
+        }
+
         /* Footer */
         footer {
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.75rem;
-            animation: fadeIn 0.5s ease-out 0.2s both;
+            animation: fadeIn 0.5s ease-out 0.3s both;
         }
 
         /* Animations */
@@ -317,6 +357,15 @@
                 margin-top: 1rem;
                 font-size: 0.7rem;
             }
+
+            .support {
+                margin-top: 1rem;
+            }
+
+            .support-btn {
+                padding: 0.6rem 1.15rem;
+                font-size: 0.78rem;
+            }
         }
 
         /* Small phones */
@@ -381,6 +430,15 @@
                 margin-top: 0.75rem;
                 font-size: 0.65rem;
             }
+
+            .support {
+                margin-top: 0.75rem;
+            }
+
+            .support-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.7rem;
+            }
         }
 
         /* Landscape phones */
@@ -433,6 +491,15 @@
                 margin-top: 0.5rem;
                 font-size: 0.6rem;
             }
+
+            .support {
+                margin-top: 0.5rem;
+            }
+
+            .support-btn {
+                padding: 0.4rem 0.85rem;
+                font-size: 0.65rem;
+            }
         }
     </style>
 </head>
@@ -480,6 +547,17 @@
                 <a href="https://ebook.truyendichvip.live/" target="_blank" class="btn"
                     onclick="event.stopPropagation()">Mua Ebook</a>
             </article>
+        </div>
+
+        <div class="support">
+            <a href="https://www.facebook.com/truyendichvip2023" target="_blank" rel="noopener noreferrer"
+                class="support-btn" aria-label="Liên hệ hỗ trợ qua Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.972h-1.513c-1.49 0-1.956.931-1.956 1.887v2.262h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073Z" />
+                </svg>
+                Liên hệ hỗ trợ
+            </a>
         </div>
 
         <footer>
