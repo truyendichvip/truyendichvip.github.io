@@ -1,123 +1,491 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-        <base href="" >
-        <title>Truyện Dịch VIP</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-        <link rel="modulepreload" href="js/vendor.slider.js"> 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
-        <link rel="stylesheet" href="css/slider.css">
-        <script type="module" crossorigin src="js/slider.js"></script>
-        <style>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Truyện Dịch VIP - Đọc truyện, nghe audio, mua ebook</title>
+    <meta name="description"
+        content="Truyện Dịch VIP - Nền tảng đọc truyện online, nghe audio chất lượng cao, mua ebook giá rẻ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
         * {
-            -webkit-touch-callout:none;
-            -webkit-user-select:none;
-            -khtml-user-select:none;
-            -moz-user-select:none;
-            -ms-user-select:none;
-            user-select:none;
-        }
-        body{
-            padding: 0;
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .swiper-button-prev, .swiper-button-next{
-            display: none;
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
         }
-        </style>
-        <script>
-    function absorbEvent_(event) {
-      var e = event || window.event;
-      e.preventDefault && e.preventDefault();
-      e.stopPropagation && e.stopPropagation();
-      e.cancelBubble = true;
-      e.returnValue = false;
-      return false;
-    }
 
-    function preventLongPressMenu(node) {
-      node.ontouchstart = absorbEvent_;
-      node.ontouchmove = absorbEvent_;
-      node.ontouchend = absorbEvent_;
-      node.ontouchcancel = absorbEvent_;
-    }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
 
-    function init() {
-      preventLongPressMenu(document.getElementByTagName('body img a'));
-    }
-  </script>
-    </head>
-    <body>
-        <div class="swiper" style="height: 100vh;">
-            <div class="swiper-wrapper">
-                 <!-- <a href="https://www.facebook.com/truyendichvip2023" class="swiper-slide">
-                    <img class="swiper-gl-image" src="https://i.imgur.com/h8u2xUA.jpg" alt="">
-                    <div class="swiper-slide-content">
-                        <div class="swiper-slide-title"></div>
-                    </div>
-                </a> -->
-              
- <!--
-                 <a href="https://www.truyendichvip.live/ebook" class="swiper-slide">
-                    <img class="swiper-gl-image" src="5014.jpg" alt="">
-                    <div class="swiper-slide-content">
-                        <div class="swiper-slide-title"></div>
-                    </div>
-                </a>
--->
-                <a href="novelbox://novel/5014" class="swiper-slide">
-                    <img class="swiper-gl-image" src="https://i.imgur.com/t2aP33h.jpg" alt="">
-                    <!-- https://i.imgur.com/3UWBuaT.jpg -->
-                    <div class="swiper-slide-content">
-                        <div class="swiper-slide-title"></div>
-                    </div>
-                </a>
-                
-<!--                 <a href="novelbox://novel/3794" class="swiper-slide">
-                    <img class="swiper-gl-image" src="https://i.imgur.com/t2aP33h.jpg" alt="">
-                    <div class="swiper-slide-content">
-                        <div class="swiper-slide-title"></div>
-                    </div>
-                </a>
- -->
-                <a href="novelbox://novel/2530" class="swiper-slide">
-                    <img class="swiper-gl-image" src="https://i.imgur.com/HPAB9NI.jpg" alt="">
-                    <div class="swiper-slide-content">
-                        <div class="swiper-slide-title"></div>
-                    </div>
-                </a>
+        .container {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+        }
 
-                <a href="novelbox://novel/3103" class="swiper-slide">
-                    <img class="swiper-gl-image" src="https://i.imgur.com/kqd5OFT.jpg" alt="">
-                    <div class="swiper-slide-content">
-                        <div class="swiper-slide-title"></div>
-                    </div>
-                </a>
-                
-                <a href="novelbox://novel/2735" class="swiper-slide">
-                    <img class="swiper-gl-image" src="https://i.imgur.com/UmsANhf.jpg" alt="">
-                    <div class="swiper-slide-content">
-                        <div class="swiper-slide-title"></div>
-                    </div>
-                </a>
+        /* Header */
+        header {
+            margin-bottom: 2rem;
+            animation: fadeIn 0.5s ease-out;
+        }
 
+        .logo {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.25rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
 
-                <a href="novelbox://novel/3152" class="swiper-slide">
-                    <img class="swiper-gl-image" src="https://i.imgur.com/fvRmwkv.jpg" alt="">
-                    <div class="swiper-slide-content">
-                        <div class="swiper-slide-title"></div>
-                    </div>
-                </a>                                
-                
-                <a href="novelbox://novel/2109" class="swiper-slide">
-                    <img class="swiper-gl-image" src="https://raw.githubusercontent.com/truyendichvip/truyendichvip.github.io/refs/heads/main/js/ebook.jpg" alt="">
-                    <div class="swiper-slide-content">
-                        <div class="swiper-slide-title"></div>
-                    </div>
-                </a>
-                
-            </div>
+        .logo-img {
+            width: clamp(36px, 8vw, 48px);
+            height: clamp(36px, 8vw, 48px);
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .tagline {
+            font-size: clamp(0.8rem, 2vw, 0.95rem);
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+        }
+
+        /* Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(220px, 1fr));
+            gap: 1.5rem;
+            animation: fadeInUp 0.5s ease-out 0.1s both;
+        }
+
+        /* Card */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 1.25rem 0.5rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card-action {
+            margin-top: auto;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 0.25rem;
+        }
+
+        .card p {
+            font-size: 0.75rem;
+            color: #64748b;
+            line-height: 1.4;
+            margin-bottom: 0.75rem;
+        }
+
+        .domain {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #667eea;
+            letter-spacing: -0.01em;
+        }
+
+        .card .domain-highlight {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #059669 !important;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 12px rgba(5, 150, 105, 0.4);
+            animation: glow 2s ease-in-out infinite;
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 0.2rem 0 0.4rem 0;
+            padding: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 12px rgba(5, 150, 105, 0.4);
+            }
+
+            50% {
+                text-shadow: 0 0 20px rgba(5, 150, 105, 0.6), 0 0 30px rgba(5, 150, 105, 0.4);
+            }
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1.2rem;
+            min-width: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+
+        .badge-img {
+            height: 40px;
+            width: auto;
+            border-radius: 8px;
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .badge-img:hover {
+            transform: translateY(-2px);
+            opacity: 0.85;
+        }
+
+        /* Sub buttons */
+        .sub-btns {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sub-btn {
+            padding: 0.35rem 0.6rem;
+            background: #f1f5f9;
+            color: #475569;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .sub-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 1.5rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.75rem;
+            animation: fadeIn 0.5s ease-out 0.2s both;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Tablet */
+        @media (max-width: 768px) {
+            body {
+                padding: 0.75rem;
+            }
+
+            header {
+                margin-bottom: 1.25rem;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+
+            .card {
+                padding: 1rem 0.75rem;
+                border-radius: 14px;
+                height: 175px;
+            }
+
+            .card .domain-highlight {
+                font-size: clamp(0.9rem, 5vw, 1.1rem);
+                margin: 0.15rem 0 0.35rem 0;
+            }
+
+            .icon {
+                font-size: 1.75rem;
+                margin-bottom: 0.35rem;
+            }
+
+            .card h3 {
+                font-size: 0.85rem;
+            }
+
+            .card p {
+                font-size: 0.7rem;
+                margin-bottom: 0.6rem;
+            }
+
+            .btn {
+                padding: 0.4rem 0.85rem;
+                font-size: 0.7rem;
+                min-width: 100px;
+            }
+
+            .sub-btns {
+                gap: 0.25rem;
+            }
+
+            .sub-btn {
+                padding: 0.3rem 0.5rem;
+                font-size: 0.65rem;
+            }
+
+            footer {
+                margin-top: 1rem;
+                font-size: 0.7rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 380px) {
+            body {
+                padding: 0.5rem;
+            }
+
+            header {
+                margin-bottom: 1rem;
+            }
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+            .tagline {
+                font-size: 0.75rem;
+            }
+
+            .grid {
+                gap: 0.5rem;
+            }
+
+            .card {
+                padding: 0.85rem 0.5rem;
+                border-radius: 12px;
+                height: 160px;
+            }
+
+            .card .domain-highlight {
+                font-size: clamp(0.75rem, 5.5vw, 0.95rem);
+                margin: 0.1rem 0 0.25rem 0;
+            }
+
+            .icon {
+                font-size: 1.5rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .card h3 {
+                font-size: 0.75rem;
+            }
+
+            .card p {
+                font-size: 0.65rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .btn {
+                padding: 0.35rem 0.7rem;
+                font-size: 0.65rem;
+                min-width: 85px;
+            }
+
+            .sub-btn {
+                padding: 0.25rem 0.4rem;
+                font-size: 0.6rem;
+            }
+
+            footer {
+                margin-top: 0.75rem;
+                font-size: 0.65rem;
+            }
+        }
+
+        /* Landscape phones */
+        @media (max-height: 500px) and (orientation: landscape) {
+            header {
+                margin-bottom: 0.5rem;
+            }
+
+            .logo {
+                font-size: 1.25rem;
+            }
+
+            .tagline {
+                font-size: 0.7rem;
+            }
+
+            .grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0.5rem;
+            }
+
+            .card {
+                padding: 0.5rem;
+            }
+
+            .icon {
+                font-size: 1.25rem;
+                margin-bottom: 0.2rem;
+            }
+
+            .card h3 {
+                font-size: 0.7rem;
+            }
+
+            .card p {
+                display: none;
+            }
+
+            .btn {
+                padding: 0.3rem 0.6rem;
+                font-size: 0.6rem;
+            }
+
+            .sub-btn {
+                padding: 0.2rem 0.35rem;
+                font-size: 0.55rem;
+            }
+
+            footer {
+                margin-top: 0.5rem;
+                font-size: 0.6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo"><img src="logo.png" alt="Truyện Dịch VIP" class="logo-img"> Truyện Dịch VIP </h1>
+            <p class="tagline">Đọc truyện · Nghe audio · Kho ebook</p>
+        </header>
+
+        <div class="grid">
+            <article class="card" onclick="window.open('https://truyendichvip.live', '_blank')">
+                <span class="icon">🌐</span>
+                <h3>Web Đọc Truyện</h3>
+                <p class="domain-highlight">truyendichvip.live</p>
+                <a href="https://truyendichvip.live" target="_blank" class="btn" onclick="event.stopPropagation()">Truy
+                    cập</a>
+            </article>
+
+            <article class="card" onclick="window.location.href='https://itunes.apple.com/app/id1670092816'">
+                <span class="icon">📱</span>
+                <h3>App iOS</h3>
+                <p>Đọc truyện trên iPhone, iPad, MacBook</p>
+                <a href="https://itunes.apple.com/app/id1670092816" target="_blank"
+                    onclick="event.stopPropagation()"><img src="appstore.svg" alt="Download on the App Store"
+                        class="badge-img"></a>
+            </article>
+
+            <article class="card">
+                <span class="icon">🤖</span>
+                <h3>App Android</h3>
+                <div class="card-action" style="display:flex;flex-direction:column;gap:0.4rem;">
+                    <a href="truyendichvip.apk" download class="btn" onclick="event.stopPropagation()">Download APK</a>
+                    <a href="https://play.google.com/store/apps/details?id=truyendich.vip.truyendichvip" target="_blank"
+                        onclick="event.stopPropagation()"><img src="googleplay.svg" alt="Get it on Google Play"
+                            class="badge-img"></a>
+                </div>
+            </article>
+
+            <article class="card" onclick="window.open('https://ebook.truyendichvip.live/', '_blank')">
+                <span class="icon">📚</span>
+                <h3>Ebook Shop</h3>
+                <p>Ebook cho máy đọc sách</p>
+                <a href="https://ebook.truyendichvip.live/" target="_blank" class="btn"
+                    onclick="event.stopPropagation()">Mua Ebook</a>
+            </article>
         </div>
-    </body>
+
+        <footer>
+            © 2026 Truyện Dịch VIP · Made with ❤️
+        </footer>
+    </div>
+</body>
+
 </html>
